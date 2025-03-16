@@ -20,7 +20,7 @@ const Home = () => {
         setTimeout(() => {
           setVisibleRole((prev) => prev + roles[roleIndex][charIndex]);
           setCharIndex(charIndex + 1);
-        }, 100); // Typing speed
+        }, 120); // Typing speed
       } else {
         setTimeout(() => {
           setVisibleRole("");

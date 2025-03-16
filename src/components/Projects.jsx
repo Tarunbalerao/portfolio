@@ -8,7 +8,6 @@ import { FaDatabase } from "react-icons/fa"; // MySQL icon
 import hotelImage from '../Assets/hotel1.png'; // Adjust the path as necessary
 import whatsappImage from '../Assets/whatsapp1.png'; // Adjust the path as necessary
 import analysisImage from '../Assets/analysis.png'; // Adjust the path as necessary
-import developerIllustration from "../Assets/dev.png"; 
 
 const projects = [
   {
@@ -52,13 +51,13 @@ const Projects = () => {
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
               {project.image && (
                 <div className="flex justify-center mb-4">
-                  <img src={project.image} alt={project.title} className="w-1/2 h-1/3 object-cover rounded" />
+                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover rounded" />
                 </div>
               )}
               {project.images && (
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-4 mb-4">
                   {project.images.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Image for ${project.title}`} className="h-48 object-cover rounded" />
+                    <img key={idx} src={img} alt={`Image for ${project.title}`} className="h-32 w-auto object-cover rounded" />
                   ))}
                 </div>
               )}
@@ -68,9 +67,9 @@ const Projects = () => {
                 ))}
               </ul>
               
-              <div className="flex space-x-4 mb-4">
+              <div className="flex flex-wrap justify-center space-x-4 mb-4">
                 {project.techStack.map((tech, idx) => (
-                  <div key={idx} className="flex items-center">
+                  <div key={idx} className="flex items-center mb-2">
                     <span className="text-2xl">{tech.icon}</span>
                     <span className="ml-2">{tech.name}</span>
                   </div>

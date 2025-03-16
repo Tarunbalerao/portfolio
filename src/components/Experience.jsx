@@ -39,7 +39,6 @@ const experiences = [
       { name: "Python", icon: <FaPython /> },
     ],
   },
-
 ];
 
 const Experience = () => {
@@ -61,11 +60,11 @@ const Experience = () => {
                   <li key={idx} className="mt-1">{point}</li>
                 ))}
               </ul>
-              <div className="mt-4 flex space-x-4">
+              <div className="mt-4 flex flex-wrap justify-center space-x-4">
                 {exp.techStack.map((tech, idx) => (
-                  <div key={idx} className="flex items-center">
+                  <div key={idx} className="flex items-center mb-2">
                     <span className="text-2xl">{tech.icon}</span>
-                    <span className="ml -2">{tech.name}</span>
+                    <span className="ml-2">{tech.name}</span>
                   </div>
                 ))}
               </div>
